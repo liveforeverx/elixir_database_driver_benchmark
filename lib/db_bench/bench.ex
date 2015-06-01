@@ -37,7 +37,7 @@ defmodule DbBench.Api.BenchMysqlotp do
   version "mysqlotp", using: :path
   desc "get v1"
   get do
-    res = :mysql_poolboy.query(:my_pool, "select id,name from domains") 
+    res = :mysql_poolboy.query(:my_pool, "select id,name from domains")
     "It works Mysql-otp" |> text
   end
 end
@@ -71,8 +71,8 @@ defmodule DbBench.Api.BenchEcto do
     res = DbBench.Repo.all(
       from d in Domain,
       select: d.name
-    ) 
-    #IO.inspect res 
+    )
+    #IO.inspect res
     "It works Ecto" |> text
   end
 end

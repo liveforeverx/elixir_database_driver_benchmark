@@ -14,10 +14,10 @@ defmodule DbBench.MysqlexSupervisor do
       {:max_overflow, 10}
       ]
     mysqlex_args = [
-      {:hostname,"10.0.3.82"},
+      {:hostname,"127.0.0.1"},
       {:database, String.to_char_list("test")},
       {:username, String.to_char_list("test")},
-      {:password, String.to_char_list("test")}
+      {:password, 'test'}
       ]
 
     children = [

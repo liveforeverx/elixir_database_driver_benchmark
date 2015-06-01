@@ -14,7 +14,8 @@ defmodule DbBench.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :exsync, :maru],
+    [applications: [:logger, #:exsync,
+                    :maru],
     mod: { DbBench, []} ]
   end
 
@@ -36,11 +37,11 @@ defmodule DbBench.Mixfile do
       #{:ecto, github: "tjheeta/ecto", branch: "mysqlex_conversion"},
       {:postgrex, "~> 0.8.1"},
       {:mysql, github: "mysql-otp/mysql-otp", tag: "1.0.0" , override: true},
-      #{:mariaex, github: "xerions/mariaex"},
+      {:mariaex, github: "xerions/mariaex", branch: "cached", override: true},
       {:poolboy, "~> 1.5.1", [optional: false, hex: :poolboy, override: true]},
-      {:mariaex, "~> 0.1.6"},
+      #{:mariaex, "~> 0.1.6"},
       {:epg_pool, github: "tjheeta/epg_pool"},
-      {:exprof, "~> 0.2.0"}, 
+      {:exprof, "~> 0.2.0"},
       {:dbg, github: "fishcakez/dbg"},
       {:recon, github: "ferd/recon"},
       {:mysql_poolboy, github: "mysql-otp/mysql-otp-poolboy"},

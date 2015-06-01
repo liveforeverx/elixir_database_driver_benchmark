@@ -1,6 +1,4 @@
 use Mix.Config
-config :maru, DbBench.Api,
-  http: [port: 8800]
 
 #config :db_bench, DbBench.Repo,
 #  adapter: Ecto.Adapters.Postgres,
@@ -16,7 +14,7 @@ config :db_bench, DbBench.Repo,
   database: "test",
   username: "test",
   password: "test",
-  hostname: "10.0.3.82",
+  hostname: "127.0.0.1",
   size: 10,
   max_overflow: 10
 

@@ -2,7 +2,10 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
-import_config "#{Mix.env}.exs"
+config :maru, DbBench.Api,
+  http: [port: 8800]
+
+#import_config "#{Mix.env}.exs"
 
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
@@ -24,3 +27,12 @@ import_config "#{Mix.env}.exs"
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
+
+config :db_bench, DbBench.Repo,
+  adapter: Ecto.Adapters.MySQL,
+  database: "test",
+  username: "test",
+  password: "test",
+  hostname: "127.0.0.1",
+  size: 10,
+  max_overflow: 10

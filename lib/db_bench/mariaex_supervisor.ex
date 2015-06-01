@@ -14,10 +14,10 @@ defmodule DbBench.MariaexSupervisor do
       {:max_overflow, 10}
       ]
     mariaex_args = [
-      {:hostname,"10.0.3.82"},
+      {:hostname,"127.0.0.1"},
       {:database, "test"},
-      {:username, "test"},
-      {:password, "test"}
+      {:username, "root"},
+      {:password, ""}
       ]
 
     children = [
